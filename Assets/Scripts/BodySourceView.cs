@@ -126,7 +126,7 @@ public class BodySourceView : MonoBehaviour
 					x = dsp.X;
 					y = dsp.Y;
 					bodyTracked = true;
-					Debug.Log ("Tracking Head");
+					//Debug.Log (x);
 					
 				}
 			}

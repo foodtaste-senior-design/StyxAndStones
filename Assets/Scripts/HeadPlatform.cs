@@ -13,7 +13,7 @@ public class HeadPlatform : MonoBehaviour {
 	void Update () {
 		if (BodySourceView.isBodyTracked ()) {
 			//more magic
-			platform.transform.position = new Vector3 ((BodySourceView.getX () / 10)-15, -11, 0);
+			platform.transform.position = new Vector3 ((BodySourceView.getX ()+100)/3, 50, 0);
 		}
 	}
 }

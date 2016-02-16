@@ -48,18 +48,29 @@
      <Compile Include="Assets\Scripts\BodySourceManager.cs" />
      <Compile Include="Assets\Scripts\BodySourceView.cs" />
      <Compile Include="Assets\Scripts\ButtonBox.cs" />
+     <Compile Include="Assets\Scripts\CharacterControl.cs" />
+     <Compile Include="Assets\Scripts\CoinCounter.cs" />
+     <Compile Include="Assets\Scripts\Collectible.cs" />
      <Compile Include="Assets\Scripts\ColorShiftPlatform.cs" />
+     <Compile Include="Assets\Scripts\ExitPortal.cs" />
      <Compile Include="Assets\Scripts\HeadPlatform.cs" />
+     <Compile Include="Assets\Scripts\LevelCompleteText.cs" />
      <Compile Include="Assets\Scripts\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\Platform.cs" />
      <Compile Include="Assets\Scripts\SimplePlatformController.cs" />
+     <Compile Include="Assets\Scripts\StaticGreenWall.cs" />
      <Compile Include="Assets\Sprites\ButtonWall.cs" />
-     <Compile Include="Assets\StaticGreenWall.cs" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
