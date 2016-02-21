@@ -1,10 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HeadPlatform.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\BodySourceView.cs" Line="136" Column="39" />
-      <File FileName="Assets\Scripts\MovingPlatform.cs" Line="10" Column="26" />
-      <File FileName="Assets\Scripts\HeadPlatform.cs" Line="17" Column="18" />
+      <File FileName="Assets\Scripts\LevelManager.cs" Line="22" Column="2" />
+      <File FileName="Assets\Scripts\CoinCounter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Collectible.cs" Line="23" Column="34" />
+      <File FileName="Assets\Scripts\SimplePlatformController.cs" Line="5" Column="2" />
+      <File FileName="Assets\Scripts\Enemy1.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\KillPlayer.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

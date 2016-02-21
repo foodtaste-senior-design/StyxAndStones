@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 
 public class CoinCounter : MonoBehaviour {
 
-	public static int score;
+	private static int score;
+	//private static ArrayList coins = new ArrayList ();
+	private static Collectible[] coins;
 
 	Text text;
 
@@ -15,6 +18,8 @@ public class CoinCounter : MonoBehaviour {
 		text = GetComponent<Text> ();
 
 		score = 0;
+
+		coins = FindObjectsOfType<Collectible> ();
 	
 	}
 
@@ -30,5 +35,12 @@ public class CoinCounter : MonoBehaviour {
 	public static void addCoin(int noOfCoins){
 
 		score += noOfCoins;
+	}
+
+	public static void loseCoins(){
+		score = 0;
+		for (int i = 0; i < coins.Length; i++) {
+			coins[i].resetCollectible();
+		}
 	}
 }

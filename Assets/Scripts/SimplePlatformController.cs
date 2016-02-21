@@ -8,7 +8,7 @@ public class SimplePlatformController : MonoBehaviour {
 
 	public static float move_force = 365f;
 	public static float max_speed = 5f;
-	public static float jump_force = 1000f;
+	public static float jump_force = 2000f;
 	public Transform ground_check;
 
 	private bool grounded = false;
