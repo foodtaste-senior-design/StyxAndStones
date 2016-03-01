@@ -9,8 +9,8 @@ public class HeadPlatform : MonoBehaviour {
 	//public Transform platformMax;				// The rightmost point to which the platform should move to
 	private float kinectMin_x = 0;				// The leftmost point to which the players head should move
 	private float kinectMax_x = 400;			// The rightmost point to which the players head should move
-	private float kinectMin_y = 0;				// The uppermost point to which the players head should move
-	private float kinectMax_y = 400;			// The lowermost point to which the players head should move
+	private float kinectMin_y = 70;				// The uppermost point to which the players head should move
+	private float kinectMax_y = 310;			// The lowermost point to which the players head should move
 
 	// Use this for initialization
 	void Start () {

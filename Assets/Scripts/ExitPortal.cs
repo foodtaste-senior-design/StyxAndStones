@@ -12,6 +12,8 @@ public class ExitPortal : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		transform.Rotate (0,0,100*Time.deltaTime); //rotates 50 degrees per second around z axi
 		
 	}
 	

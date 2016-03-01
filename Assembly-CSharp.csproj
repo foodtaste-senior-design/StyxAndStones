@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\ColorShiftPlatform.cs" />
      <Compile Include="Assets\Scripts\DestroyFinishedParticle.cs" />
      <Compile Include="Assets\Scripts\Enemy1.cs" />
+     <Compile Include="Assets\Scripts\Enemy2.cs" />
      <Compile Include="Assets\Scripts\ExitPortal.cs" />
      <Compile Include="Assets\Scripts\HeadPlatform.cs" />
      <Compile Include="Assets\Scripts\KillPlayer.cs" />
