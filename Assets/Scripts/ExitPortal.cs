@@ -4,6 +4,7 @@ using System.Collections;
 public class ExitPortal : MonoBehaviour {
 	
 	private static bool inPortal;
+	public float spinRate;
 	
 	// Use this for initialization
 	void Start () {
@@ -13,7 +14,7 @@ public class ExitPortal : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.Rotate (0,0,100*Time.deltaTime); //rotates 50 degrees per second around z axi
+		transform.Rotate (0,0,spinRate*Time.deltaTime); //rotates 50 degrees per second around z axi
 		
 	}
 	
