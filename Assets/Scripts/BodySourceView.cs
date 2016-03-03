@@ -14,7 +14,7 @@ public class BodySourceView : MonoBehaviour
 	
 	public Text coordinates;
 	static float x;
-	float y;
+	static float y;
 	public static bool bodyTracked;
 	
 	private Dictionary<Kinect.JointType, Kinect.JointType> _BoneMap = new Dictionary<Kinect.JointType, Kinect.JointType>()
@@ -126,7 +126,7 @@ public class BodySourceView : MonoBehaviour
 					x = dsp.X;
 					y = dsp.Y;
 					bodyTracked = true;
-					Debug.Log ("Tracking Head");
+					//Debug.Log (x);
 					
 				}
 			}
@@ -206,6 +206,10 @@ public class BodySourceView : MonoBehaviour
 	// Returns x value
 	public static float getX(){
 		return x;
+	}
+
+	public static float getY(){
+		return y;
 	}
 
 	public static bool isBodyTracked(){

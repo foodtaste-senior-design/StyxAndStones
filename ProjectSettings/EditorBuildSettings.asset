@@ -10,4 +10,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/StartMenu.unity
   - enabled: 1
-    path: Assets/level_demo.unity
+    path: Assets/Sandbox.unity

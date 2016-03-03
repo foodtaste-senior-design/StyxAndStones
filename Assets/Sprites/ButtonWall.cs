@@ -13,11 +13,16 @@ public class ButtonWall : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		/* for colored walls
 		if (ButtonBox.isInBox ()) {
 			if (gameObject.GetComponent<Renderer> ().material.color == Color.grey) {
 				gameObject.GetComponent<Renderer> ().material.color = Color.green;
 				collision.isTrigger = true;
 			}
+		}
+		*/
+		if (ButtonBox.isInBox ()) {
+			gameObject.SetActive(false);
 		}
 	}
 }
