@@ -19,10 +19,11 @@ public class ExitPortal : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other) {
 		//numCollected requirement will change per level; hash this out somehow
-		if (other.transform.tag == "Player" && Collectible.numCollected() == 4) {
+		if (other.transform.tag == "Player" && Collectible.numCollected() == 2) {
 			inPortal = true;
 		}
-	}	
+	}
+	
 	
 	void OnTriggerExit2D(Collider2D other) {
 		if (other.transform.tag == "Player") {

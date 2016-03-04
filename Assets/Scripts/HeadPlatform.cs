@@ -23,6 +23,15 @@ public class HeadPlatform : MonoBehaviour {
 			float head_x = BodySourceView.getX();
 			float head_y = BodySourceView.getY();
 
+			if (head_x < kinectMin_x)
+				head_x = kinectMin_x;
+			if (head_x > kinectMax_x)
+				head_x = kinectMax_x;
+			if (head_y < kinectMin_y)
+				head_y = kinectMin_y;
+			if (head_y > kinectMax_y)
+				head_y = kinectMax_y;
+
 			float new_X = points[0].position.x + (((head_x-kinectMin_x)/(kinectMax_x-kinectMin_x)) * (points[1].position.x-points[0].position.x));
 			float new_Y = points[0].position.y + (((head_y-kinectMin_y)/(kinectMax_y-kinectMin_y)) * (points[1].position.y-points[0].position.y));
 
