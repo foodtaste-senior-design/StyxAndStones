@@ -6,9 +6,9 @@ public class SimplePlatformController : MonoBehaviour {
 	[HideInInspector] public bool facing_right = true;
 	[HideInInspector] public bool jump = false;
 
-	public float move_force = 365f;
-	public float max_speed = 5f;
-	public float jump_force = 1000000f;
+	public static float move_force = 365f;
+	public static float max_speed = 5f;
+	public static float jump_force = 2000f;
 	public Transform ground_check;
 
 	private bool grounded = false;
@@ -30,12 +30,13 @@ public class SimplePlatformController : MonoBehaviour {
 		if (Input.GetButtonDown("Jump") && grounded) {
 			jump = true;
 		}
+		
 	}
 
 	void FixedUpdate() {
 		float height = Input.GetAxis ("Horizontal");
 		anim.SetFloat ("Speed", Mathf.Abs (height));
-
+		 
 		if ((height * rb2d.velocity.x) < max_speed) {
 			rb2d.AddForce(Vector2.right * height * move_force);
 		}
@@ -55,6 +56,7 @@ public class SimplePlatformController : MonoBehaviour {
 			rb2d.AddForce(new Vector2(0f, jump_force));
 			jump = false;
 		}
+
 	}
 
 	void Flip() {
@@ -74,5 +76,11 @@ public class SimplePlatformController : MonoBehaviour {
 		if (other.transform.tag == "MovingPlatform") {
 			transform.parent = null;
 		}
+	}	
+
+	public static void stopMoving () {
+		max_speed = 0f;
+		move_force = 0f;
+		jump_force = 0f;
 	}
 }

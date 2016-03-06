@@ -7,7 +7,6 @@ public class ButtonBox : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gameObject.GetComponent<Renderer> ().material.color = Color.red;
 		inBox = false;
 	}
 	
