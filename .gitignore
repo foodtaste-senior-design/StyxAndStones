@@ -1,4 +1,5 @@
 # Stolen from StackOverflow
+*.exe
 
 # =============== #
 # Unity generated #
