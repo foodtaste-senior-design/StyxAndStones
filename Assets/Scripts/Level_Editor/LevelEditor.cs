@@ -6,13 +6,16 @@ public class LevelEditor : MonoBehaviour {
     public float height = 4;
     public float width = 4;
 
-    public Color grid_color = Color.white;
+    public Color grid_color = new Color(1.0F, 1.0F, 1.0F, 0.5F);
     public bool grid_visible = true;
+
+    public GameObject player_character = null;
 
     public List<GameObject> tile_objects = new List<GameObject>();
     public int current_tile = 0;
 
     private List<GameObject> level_objects = new List<GameObject>();
+    public bool set_character = false;
 
     void OnDrawGizmos() {
         init_grid();
@@ -38,7 +41,21 @@ public class LevelEditor : MonoBehaviour {
         }
     }
 
+    public void delete_character() {
+        DestroyImmediate(player_character);
+    }
+
     public void add_game_object(Vector3 pos) {
+        if (set_character) {
+            if (player_character != null) {
+                delete_character();
+            }
+            GameObject pc = (GameObject)Instantiate(Resources.Load("PlayerCharacter"));
+            pc.transform.position = pos;
+            pc.transform.SetParent(transform);
+            player_character = pc;
+            return;
+        }
         if (tile_objects.Count == 0) {
             return;
         }
@@ -56,6 +73,10 @@ public class LevelEditor : MonoBehaviour {
         level_objects.Add(new_obj);
     }
 
+    public void place_character() {
+        set_character = true;
+    }
+
     public void remove_game_object(Vector3 pos) {
         foreach (GameObject obj in level_objects) {
             if (obj.transform.position == pos) {
@@ -67,14 +88,12 @@ public class LevelEditor : MonoBehaviour {
     }
 
     public void select_tile(int n) {
+        set_character = false;
         current_tile = n >= tile_objects.Count ? 0 : n;
     }
 
     public void add_tile() {
         tile_objects.Add(null);
-    }
-
-    public void set_tile() {
     }
 
     public void delete_tile(int n) {

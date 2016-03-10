@@ -16,6 +16,16 @@ public class UnityLevelEdit : Editor {
                 GUILayout.ExpandWidth(true),
                 GUILayout.Height(1)
             });
+        GUILayout.Label("Player Character Placement");
+        GUILayout.BeginHorizontal();
+        if (GUILayout.Button("Place Character")) {
+            grid.place_character();
+        }
+        if (GUILayout.Button("Delete Character")) {
+            grid.delete_character();
+        }
+        GUILayout.EndHorizontal();
+
         GUILayout.Label("Tile selection");
 
         if (grid.current_tile < grid.tile_objects.Count) {
@@ -36,7 +46,9 @@ public class UnityLevelEdit : Editor {
             if (obj) {
                 grid.tile_objects[i] = obj;
             }
-            if (tile != null && i != grid.current_tile && GUILayout.Button("Select")) {
+            if (tile != null &&
+                    (grid.set_character || i != grid.current_tile) &&
+                    GUILayout.Button("Select")) {
                 grid.select_tile(i);
             }
             if (GUILayout.Button("-", GUILayout.Width(20f))) {
@@ -60,9 +72,6 @@ public class UnityLevelEdit : Editor {
                     "Sure, dude.", "Nope nope.")) {
             grid.clear_level();
         }
-    }
-
-    void clear_level() {
     }
 
     void OnSceneGUI() {
@@ -95,7 +104,8 @@ public class UnityLevelEdit : Editor {
     }
 
     void on_mouse_event(Vector2 pos, int button) {
-        Ray ray = Camera.current.ScreenPointToRay(new Vector3(pos.x, -pos.y + Camera.current.pixelHeight));
+        Ray ray = Camera.current.ScreenPointToRay(
+                new Vector3(pos.x, -pos.y + Camera.current.pixelHeight));
 
         Vector3 mouse_pos = ray.origin;
 
